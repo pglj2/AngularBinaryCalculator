@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": []
           },
@@ -91,7 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": []
           }
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "AngularBinaryCalculator"
+  "defaultProject": "AngularBinaryCalculator",
+  "cli": {
+    "analytics": "29a2247c-27ad-4ba2-b3bf-59d6b2f38d2f"
+  }
 }

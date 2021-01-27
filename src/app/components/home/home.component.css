@@ -1,0 +1,29 @@
+#box{
+    text-align: center;
+    margin-top:91px;        
+}
+
+#content{
+    width: 40%;
+    min-width: 280px;
+    margin: auto;
+    background-color: #f3f3f39e;
+    border-style: ridge;
+    padding: 15px;
+}
+
+.formField{
+    margin-bottom: 1vh;
+}
+
+#grid{
+    display: grid;
+}
+
+#body__calculator{
+    text-align: initial;
+}
+
+#btn__calculate{
+    width: 100%;
+}

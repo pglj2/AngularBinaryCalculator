@@ -1,0 +1,41 @@
+<div id="box">
+    <div id="content">
+        <div>
+            <h1>Calculadora Binária</h1>
+        </div>
+        <div id="body__calculator">
+            <form [formGroup]="calculatorForm" (ngSubmit)="calculate()">
+                <div id="grid">
+                    <mat-form-field appearance="fill" class="formField">
+                        <input matInput placeholder="0000101" formControlName="leftValue">
+                        <mat-error *ngIf="formValue.leftValue.errors?.required">Este campo obrigatório</mat-error>
+                        <mat-error *ngIf="formValue.leftValue.errors?.pattern">O campo tem que ser um número binário</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="formField">
+                        <mat-select formControlName="operator">
+                            <mat-option value="+">+</mat-option>
+                            <mat-option value="-">-</mat-option>
+                            <mat-option value="*">*</mat-option>
+                            <mat-option value="/">/</mat-option>
+                            <mat-option value="%">%</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="formValue.operator.errors?.required">Este campo obrigatório</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="formField">
+                        <input matInput placeholder="0000011" formControlName="rightValue">
+                        <mat-error *ngIf="formValue.rightValue.errors?.required">Este campo obrigatório</mat-error>
+                        <mat-error *ngIf="formValue.rightValue.errors?.pattern">O campo tem que ser um número binário</mat-error>
+                    </mat-form-field>
+                    <div *ngIf="resultadoOperacao">
+                        <hr>
+                        <strong>Resultado:</strong>
+                        <span *ngIf="resultadoOperacao != 'invalido'">{{resultadoOperacao}}</span>
+                        <span *ngIf="resultadoOperacao == 'invalido'" style="color: red;"> Operação inválida!</span>
+                    </div>
+                </div>
+                <br>
+                <button id="btn__calculate" mat-stroked-button [disabled]="calculatorForm.invalid">Calcular</button>
+            </form>
+        </div>
+    </div>
+</div>
